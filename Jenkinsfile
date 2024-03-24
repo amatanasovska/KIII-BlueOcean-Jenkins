@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("amatanasovska/KIII-BlueOcean-Jenkins")
+       app = docker.build("amatanasovska/kiii-hw4")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
